@@ -1,0 +1,75 @@
+ => A class is a template for objects, and an object is an instance of class.
+ =>  In a class, variables are called properties and functions are called methods!
+
+ => Without accessmodifer cannot create properties
+ => Default or implicity public will be the accessmodifer method
+
+ => The $this keyword refers to the current object, and is only available inside methods.
+    * this->propertyName (->) Object Operator
+    * Outside class after creating object using -> Object Operator you can access the properties & methods
+=> You can use the instanceof keyword to check if an object belongs to a specific class:
+    * $Objectname instanceof ClassName returns boolean 
+
+=>A constructor allows you to initialize an object's properties upon creation of the object.
+ 
+ * If create a construct function (__construct()), PHP will automatically call this function when you create an object from a class
+
+ *Notice that the construct function starts with two underscores (__)!
+
+    =>A destructor in PHP is a special method inside a class that is automatically called when an object is destroyed or when the script execution ends.
+
+    Declared with  __destruct().
+
+    At most one destructor is allowed per class.
+
+    Automatic Cleanup → No need to manually close/free resources.
+
+    Reliability → Ensures cleanup happens when script finishes.
+
+    Resource Management → Useful for databases, sockets, files, memory-heavy tasks.
+
+    Error Safety → Even if the script crashes, PHP will still call the destructor before shutting down.
+
+    🔑 Key Points
+
+    Name must be __destruct() (double underscore).
+
+    No arguments are allowed.
+
+    Called automatically, you don’t call it yourself.
+
+    Only one destructor per class.
+
+    Order: PHP calls destructors in reverse order of object creation at the end of script.
+
+
+✅ What are Access Modifiers?
+
+Access modifiers define the visibility (access level) of properties and methods in a class.
+They decide who can access them:
+
+Only the class itself?
+
+The class + child classes?
+
+Or anyone (outside objects)?
+
+✅ Types of Access Modifiers in PHP
+
+public → Accessible everywhere.
+
+private → Accessible only within the same class.
+
+protected → Accessible within the same class + subclasses (inherited classes).
+
+✅ Why do we use Access Modifiers?
+
+We use them to:
+
+Encapsulate data → Hide details that shouldn’t be accessed directly.
+
+Protect data integrity → Prevent unwanted changes from outside code.
+
+Control object behavior → Expose only necessary methods/properties.
+
+Enable reusability and security → Safer and cleaner class design.
